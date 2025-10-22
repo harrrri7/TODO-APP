@@ -26,7 +26,7 @@ function App() {
     if (newTodo.trim() === '') return;
     
     try {
-      const response = await fetch('http://localhost:5000/todos', {
+      const response = await fetch('https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function App() {
   // Toggle todo completion
   const toggleTodo = async (id, completed, text) => {
     try {
-      const response = await fetch(`http://localhost:5000/todos/${id}`, {
+      const response = await fetch(`https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/todos/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function App() {
   // Delete todo
   const deleteTodo = async (id) => {
     try {
-      await fetch(`http://localhost:5000/todos/${id}`, {
+      await fetch(`https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/${id}`, {
         method: 'DELETE',
       });
       setTodos(todos.filter(todo => todo.id !== id));
