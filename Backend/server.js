@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // Create our app
 const app = express();
-const port = 5000; // Our server will run on port 5000
+const port = process.env.PORT || 5000; // Our server will run on port 5000
 
 // Middleware - these help our app work properly
 app.use(cors()); // Allows frontend to communicate with backend
