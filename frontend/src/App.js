@@ -13,7 +13,7 @@ function App() {
   // Fetch todos from backend
   const fetchTodos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/todos');
+      const response = await fetch('https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/todos');
       const data = await response.json();
       setTodos(data);
     } catch (error) {
