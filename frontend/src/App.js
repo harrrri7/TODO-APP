@@ -13,7 +13,7 @@ function App() {
   // Fetch todos from backend
   const fetchTodos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/todos');
+      const response = await fetch('https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/todos');
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -44,7 +44,7 @@ function App() {
   // Toggle todo completion
   const toggleTodo = async (id, completed, text) => {
     try {
-      const response = await fetch(`http://localhost:5000/todos/${id}`, {
+      const response = await fetch(`https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/todos/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function App() {
   // Delete todo
   const deleteTodo = async (id) => {
     try {
-      await fetch(`http://localhost:5000/todos/${id}`, {
+      await fetch(`https://testwebapptodo-cbfra0dxb6fdcbhn.centralindia-01.azurewebsites.net/${id}`, {
         method: 'DELETE',
       });
       setTodos(todos.filter(todo => todo.id !== id));
